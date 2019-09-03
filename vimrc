@@ -18,6 +18,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-eunuch'
 Plugin 'ycm-core/YouCompleteMe'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
 
@@ -44,11 +45,6 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 let notabs = 0
 nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
 
-"Set-up clang for c++ autocomplete
-let g:clang_library_path='/usr/lib/llvm-6.0/lib/'
-let g:clang_complete_auto = 1
-let g:clang_complete_copen = 1
-
 "My mappings
 let mapleader = "-"
 nnoremap <C-U> viwU<ESC>
@@ -56,3 +52,7 @@ nnoremap <C-L> viwu<ESC>
 nnoremap <leader>ev :vsplit ~/.vimrc<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
 nnoremap ; :Files<CR>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
