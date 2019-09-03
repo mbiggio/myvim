@@ -1,1 +1,1 @@
-# myvim
+# my vim plugins/settings
