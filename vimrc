@@ -47,12 +47,35 @@ nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Ba
 
 "My mappings
 let mapleader = "-"
-nnoremap <C-U> viwU<ESC>
-nnoremap <C-L> viwu<ESC>
+"quickly move
+""Switch window with C-`direction`
+noremap <C-H> <C-W>h
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-L> <C-W>l
+""Switch tab with C-`direction`
+noremap th gT
+noremap tl gt
+""quickly open and reload .vimrc
 nnoremap <leader>ev :vsplit ~/.vimrc<CR>
 nnoremap <leader>sv :source ~/.vimrc<CR>
+""quickly quit and save
+nnoremap <leader>q :quit<CR>
+nnoremap <leader>w :write<CR>
+""quick access to FZF
 nnoremap ; :Files<CR>
+""unmap arrows
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
+
+"Insert mode directions
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <Up>    <Nop>
+inoremap <Down>  <Nop>
+inoremap <Left>  <Nop>
+inoremap <Right> <Nop>
