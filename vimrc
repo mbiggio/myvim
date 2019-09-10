@@ -53,6 +53,11 @@ noremap <C-H> <C-W>h
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-L> <C-W>l
+""Fast move with S-`direction`
+noremap <S-H> ^
+noremap <S-J> <C-F>
+noremap <S-K> <C-B>
+noremap <S-L> $
 ""Switch tab with C-`direction`
 noremap th gT
 noremap tl gt
@@ -63,7 +68,8 @@ nnoremap <leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>q :quit<CR>
 nnoremap <leader>w :write<CR>
 ""quick access to FZF
-nnoremap ; :Files<CR>
+nnoremap ; :GFiles<CR>
+nnoremap , :Tags<CR>
 ""unmap arrows
 noremap <Left> <NOP>
 noremap <Right> <NOP>
