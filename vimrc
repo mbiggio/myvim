@@ -75,6 +75,8 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
+""recreate tag file
+noremap <leader>t :!ctags -R .<CR><CR>
 
 "Insert mode directions
 inoremap <C-k> <Up>
