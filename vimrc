@@ -22,9 +22,13 @@ Plugin 'airblade/vim-gitgutter'
 call vundle#end()
 filetype plugin indent on
 
-"TCM settings
+let mapleader = "-"
+
+"YCM settings
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_rust_src_path = $RUST_SRC_PATH
+nnoremap <leader>g :YcmCompleter GoTo<CR>
 
 "NERDTree Settings
 autocmd StdinReadPre * let s:std_in=1
@@ -46,7 +50,6 @@ let notabs = 0
 nnoremap <silent> <F8> :let notabs=!notabs<Bar>:if notabs<Bar>:tabo<Bar>:else<Bar>:tab ball<Bar>:tabn<Bar>:endif<CR>
 
 "My mappings
-let mapleader = "-"
 "quickly move
 ""Switch window with C-`direction`
 noremap <C-H> <C-W>h
