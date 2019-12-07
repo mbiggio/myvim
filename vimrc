@@ -19,6 +19,9 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-eunuch'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'SjB/devhelp.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -71,7 +74,7 @@ nnoremap <leader>sv :source ~/.vimrc<CR>
 nnoremap <leader>q :quit<CR>
 nnoremap <leader>w :write<CR>
 ""quick access to FZF
-nnoremap ; :GFiles<CR>
+nnoremap ; :Files<CR>
 nnoremap , :Tags<CR>
 ""unmap arrows
 noremap <Left> <NOP>
