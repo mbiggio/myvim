@@ -1,7 +1,12 @@
 set nocompatible
 set number
 set bs=2
-set shiftwidth=2
+
+"tabs to spaces
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
 set laststatus=2
 set filetype=off
 syn on
@@ -22,6 +27,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'SjB/devhelp.vim'
+Plugin 'joe-skb7/cscope-maps'
 call vundle#end()
 filetype plugin indent on
 
@@ -31,7 +37,16 @@ let mapleader = "-"
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_rust_src_path = $RUST_SRC_PATH
+let g:ycm_confirm_extra_conf = 0
+"debug logs for ycm -> check logs location with :YcmDebugInfo<CR>
+"let g:ycm_log_level = 'debug'
 nnoremap <leader>g :YcmCompleter GoTo<CR>
+
+""recreate tag file
+noremap <leader>t :!ctags -R .<CR><CR>
+
+"devhelp settings
+let g:devhelpSearchKey = '<C-G>'
 
 "NERDTree Settings
 autocmd StdinReadPre * let s:std_in=1
@@ -81,8 +96,6 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
-""recreate tag file
-noremap <leader>t :!ctags -R .<CR><CR>
 
 "Insert mode directions
 inoremap <C-k> <Up>
